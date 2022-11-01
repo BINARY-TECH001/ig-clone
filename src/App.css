@@ -1,0 +1,282 @@
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body{
+    background-color: #fafafa;
+}
+
+nav{
+    position: fixed;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    width: 100vw;
+    margin-left: .4rem;
+    margin-right: .4rem;
+    height: 4rem;
+    background-color: #fff;
+    border-bottom: .1em solid #dbdbdb;
+}
+
+button{
+    cursor: pointer;
+    padding: unset;
+    border: unset;
+    background: unset;
+    transition: all 0.2s ease-in-out;
+}
+
+.logo{
+    width: 20%;
+}
+
+.logo > img{
+    height: 2rem;
+    width: 6rem;
+    vertical-align: middle;
+}
+
+.search{
+    background: #fafafa;
+    border: 1px solid rgb(165, 162, 162);
+    border-radius: .3rem;
+    height: 60%;
+    width: 30%;
+}
+
+.search input{
+    border: 0.7rem solid #dbdbdb;
+    background: #fafafa;
+    height: 100%;
+    width: 90%;
+    font-size: 1rem;
+    border: none;
+    padding-left: .4rem;
+}
+
+.search > input:focus{
+    outline: none;
+}
+
+.search > i{
+    font-size: .8rem;
+}
+
+.search::placeholder{
+    color: #808080;
+}
+
+
+
+.nav-links{
+    width: 40%;
+    display: flex;
+}
+
+.nav-links > button{
+    width: 100%;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+}
+
+button > i{
+    font-size: 1.3rem;
+    color: #555353;
+}
+
+/* BIO STYLING */
+.bio{
+    display: flex;
+    position: relative;
+    height: 50vh;
+    align-items: center;
+    justify-content: space-around;
+    border-bottom: .5px solid #cccccc8e;
+}
+
+.bio img{
+    height: 12rem;
+    width: 12rem;
+    /* border-radius: .5rem; */
+    border-radius: 50%;
+}
+
+.bio h2{
+    font-size: 1.6rem;
+    font-weight: 400;
+    color: #000;
+    margin: 2rem 0;
+}
+
+.bio p{
+    font-size: 1rem;
+    font-weight: 300;
+    color: #555353;
+    margin-top: .4rem;
+}
+
+.profile-info{
+    margin-right: 20%;
+}
+
+.profile-info .editBtn{
+    margin:1rem 0;
+    width: 4rem;
+    height: 2rem;
+    background-color: rgb(83, 83, 207);
+    color: #fff;
+    border-radius: .3rem;
+    font-size: 1rem;
+}
+
+.edit-bio-form {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-direction: column;
+}
+
+#profilePhotoInput{
+    visibility: hidden;
+}
+
+.edit-bio-form input{
+    height: 2rem;
+    width: 100%;
+    margin-top: 1rem;
+    padding-left: .5rem;
+    border-radius: .3rem;
+    border: 1px solid #808080;
+}
+
+.btns{
+    display: flex;
+    align-items: flex-start;
+    width: 100%;
+}
+
+.btns .cancel-button{
+    background-color: rgb(165, 9, 9);
+    height: 2rem;
+    width: 4rem;
+    color: #fff;
+    font-size: 1rem;
+    border-radius: .3rem;
+}
+
+.btns .save-button{
+    background-color: rgb(63, 63, 199);
+    margin-left: 1rem;
+    height: 2rem;
+    width: 4rem;
+    color: #fff;
+    font-size: 1rem;
+    border-radius: .3rem;
+}
+
+button:hover{
+    cursor: pointer;
+}
+
+/* GALLERY STYLES */
+.gallery{
+    background: #f7f3f3a8;
+    width: 100vw;
+}
+
+.gallery input{
+    visibility: hidden;
+} 
+
+.gallery .addPics{
+    display: flex;
+    align-items: flex-end;
+    justify-content: flex-end;
+    width: 100%;
+    height: 49%;
+    position: fixed;
+}
+
+.add-icon{
+    font-size: 3rem;
+    margin: 1rem 1.5rem;
+    color: rgb(165, 9, 9);
+    transition: all .6s ease-in-out;
+}
+
+.gallery .photos{
+    height: 100%;
+    width: 95%;
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+}
+
+.gallery .imgCon{
+    position: relative;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    margin-top: 3rem;
+    height: 70%;
+    box-shadow: 3px 3px 3px rgb(141, 133, 133),
+                -3px -3px 3px rgb(139, 139, 146);
+    border-radius: .4rem;
+    margin: 1rem;
+    z-index: 3;
+}
+
+.gallery .imgCon img{
+    height: 20rem;
+    width: 17rem;
+    flex-wrap: wrap;
+    padding: .5rem;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.gallery .dele{
+    opacity: 0;
+    width: 100%;
+    height: 100%;
+    position: absolute;
+    top: 0;
+    left: 0;
+    background-color: rgba(0, 0, 0, .4);
+    z-index: 3;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    transition: all .5s ease;
+    cursor: pointer;
+}
+
+.gallery .dele:hover{
+    opacity: 1;
+}
+
+.dele button{
+    height: 2rem;
+    width: 30%;
+    border-radius: .5rem;
+    color: #fff;
+    background-color: rgb(165, 9, 9);
+}
+
+.gallery .dele:hover{
+    visibility: visible;
+}
+
+
+.load{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    height: 100%;
+    width: 100%;
+}
